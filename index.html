@@ -9,7 +9,203 @@
 <body>
     <main class="container">
         <section class="class">
+            <h2 class="subtitle">Clase 1</h2>
+            <h3>Comunicaciones</h3>
+            <iframe src="./assets/Clase1-redes.pdf" width="1000" height="600" style="border: none;"></iframe>
+            <p class="text">El proceso de la comunicación implica un medio, hoy en dia es entre terminales.
+                Los medios de comunicación pueden ser alambricos o inalámbricos.
+                El Objetivo en un sistema de comunicación es llevar información de un punto a otro a través de un canal de comunicación.
+El Transmisor se encarga de adaptar la señal de la información para que pueda viajar por el canal de comunicación bajo presencia de interferencia.
+La Función del Receptor es recuperar la información que ha sido afectada por la interferencia para después regresar a su estado original (voz, datos, video etc.).
+Las interferencias son obstáculos que pueden llegar a distorsionar, desvirtuar o impedir parcial o totalmente el mensaje, y se sitúan entre el emisor y el receptor, cuando se gesta el proceso comunicativo. Las Barreras u obstáculos que puedan surgir durante el proceso comunicativo y que impiden que el mensaje se interprete correctamente por el receptor. Barreras de la comunicación. ... Estos factores impiden o dificultan la comunicación, deformando el mensaje u obstaculizando el proceso general de la comunicación.
+INTERFERENCIA: Es cualquier cosa que altera, modifica o interrumpe la señal cuando viaja a lo largo del canal entre fuente y receptor.
+RUIDO: Se denomina ruido en la comunicación a toda señal no deseada que se mezcla con la señal útil que queremos transmitir.
 
+            </p>
+            <p class="text">La conversión analógica-digital consiste en la transcripción de señales analógicas en señal digital, con el propósito de facilitar su procesamiento (codificación, compresión, etc.) y hacer la señal resultante (digital) más inmune al ruido y otras interferencias a las que son más sensibles las señales analógicas.
+            </p>
+            <p class="text">Codec
+                Es una abreviatura de Codificador-Decodificador. Describe una especificación implementada en software, hardware o una combinación de ambos, capaz de transformar un archivo con un flujo de datos (stream) o una señal. Los codecs pueden codificar el flujo o la señal (a menudo para la transmisión, el almacenaje o el cifrado) y recuperarlo o descifrarlo del mismo modo para la reproducción o la manipulación en un formato más apropiado para estas operaciones. Los codecs son usados a menudo en videoconferencias y emisiones de medios de comunicación.
+            Típicamente los códec tienen un procesamiento asimétrico, es decir que están diseñados para descomprimir video más rápido que lo que tarda en comprimirlo. Esto beneficia al play back (reproducción de archivos guardados en un file system) de un video en tiempo real.
+                La mayor parte de los codecs provoca pérdidas de información para conseguir un tamaño lo más pequeño posible del archivo destino. Hay también codecs sin pérdidas, pero en la mayor parte de aplicaciones prácticas, para un aumento casi imperceptible de la calidad no merece la pena un aumento considerable del tamaño de los datos. La excepción es si los datos sufrirán otros tratamientos en el futuro. En este caso, una codificación repetida con pérdidas a la larga dañaría demasiado la calidad.
+                Muchos archivos multimedia contienen tanto datos de audio como de vídeo, y a menudo alguna referencia que permite la sincronización del audio y el vídeo. Cada uno de estos tres flujos de datos puede ser manejado con programas, procesos, o hardware diferentes; pero para que estos streams sean útiles para almacenarlos o transmitirlos, deben ser encapsulados juntos. Esta función es realizada por un formato de archivo de vídeo (contenedor), como .mpg, .avi, .mov, .mp4, .rm o wmv. Algunos de estos formatos están limitados a contener streams que se reducen a un pequeño juego de codecs, mientras otros son usados para objetivos más generales.
+            De las transformaciones ofrecidas por los codecs, se utilizan las más comunes para conseguir:
+            Transmisión: Convertir una señal de analógica a digital y viceversa
+            Compresión : Comprimir y descomprimir datos, para maximizar el provecho de dispositivos de almacenaje
+            Encriptación: Convertir datos a un formato legible solo mediante contraseña, para administrar el acceso informático
+            </p>
+            <p class="text">
+                Modulación de amplitud en cuadratura QAM (Quadrature Amplitude Modulation). Consiste en modular por desplazamiento en amplitud ( ASK) de forma independiente, dos señales portadoras que tienen la misma frecuencia pero que están desfasadas entre sí 90º. La señal modulada QAM es el resultado de sumar ambas señales ASK
+
+            </p>
+            <p class="text">La modulación por división ortogonal de frecuencia, en inglés Orthogonal Frequency Division
+                Multiplexing (OFDM), también llamada modulación por multitono discreto, en inglés Discreet
+                Multitone Modulation (DMT), es una modulación que consiste en enviar la información modulando
+                en QAM o en PSK un conjunto de portadoras de diferente frecuencia.
+                Normalmente se realiza la modulación OFDM tras pasar la señal por un codificador de canal con el
+                objetivo de corregir los errores producidos en la transmisión, entonces esta modulación se
+                denomina COFDM, del inglés Coded OFDM.
+                Debido al problema técnico que supone la generación y la detección en tiempo continuo de los
+                cientos, o incluso miles, de portadoras equiespaciadas que forman una modulación OFDM, los
+                procesos de modulación y demodulación se realizan en tiempo discreto mediante la IDFT y la DFT
+                respectivamente.
+                Características de la modulación OFDM
+                La modulación OFDM es muy robusta frente al multitrayecto, que es muy habitual en los canales
+                de radiodifusión, frente a los desvanecimientos selectivos en frecuencia y frente a las interferencias
+                de RF. Debido a la las características de esta modulación, las distintas señales con distintos retardos
+                y amplitudes que llegan al receptor contribuyen positivamente a la recepción, por lo que existe la
+                posibilidad de crear redes de radiodifusión de frecuencia única sin que existan problemas de
+                interferencia.
+                Sistemas que utilizan la modulación OFDM
+                Entre los sistemas que usan la modulación OFDM destacan:
+                • La televisión digital terrestre DVB-T, también conocida como TDT
+                • La radio digital DAB
+                • La radio digital de baja frecuencia DRM
+                • El protocolo de enlace ADSL
+                • El protocolo de red de área local IEEE 802.11a/g, también conocido como Wireless LAN
+                • El sistema de transmisión inalámbrica de datos WiMAX
+                </p>
+                <p class="text">La transmisión síncrona es una técnica que consiste en el enviar una trama de datos (conjunto de caracteres) que configura un bloque de información comenzando con un conjunto de bits de sincronismo (SYN) y terminando con otro conjunto de bits de final de bloque (ETB). En este caso, los bits de sincronismo tienen la función de sincronizar los relojes existentes tanto en el emisor como en el receptor, de tal forma que estos controlan la duración de cada bit y caracter.
+                    Dicha transmisión se realiza con un ritmo que se genera centralizadamente en la red y es el mismo para el emisor como para el receptor. La información se transmite entre dos grupos, denominados delimitadores (8 bits).
+
+                    </p>
+                <p class="text">La transmisión asíncrona tiene lugar cuando el proceso de sincronización entre emisor y receptor se realiza en cada palabra de código transmitido. Esta sincronización se lleva a cabo a través de unos bits especiales que definen el entorno de cada código.
+                    También se dice que se establece una relación asíncrona cuando no hay ninguna relación temporal entre la estación que transmite y la que recibe. Es decir, el ritmo de presentación de la información al destino no tiene por qué coincidir con el ritmo de presentación de la información por la fuente. En estas situaciones tampoco se necesita garantizar un ancho de banda determinado, suministrando solamente el que esté en ese momento disponible. Es un tipo de relación típica para la transmisión de datos.
+                    En este tipo de red el receptor no sabe con precisión cuando recibirá un mensaje. Cada carácter a ser transmitido es delimitado por un bit de información denominado de cabecera o de arranque, y uno o dos bits denominados de terminación o de parada.
+                    El bit de arranque tiene dos funciones de sincronización de reloj del transmisor y del receptor.
+                    El bit o bits de parada, se usan para separar un caracter del siguiente.
+                    Después de la transmisión de los bits de información se suele agregar un bit de paridad (par o impar). Dicho Bit sirve para comprobar que los datos se transfieran sin interrupción. El receptor revisa la paridad de cada unidad de entrada de datos.
+                    Partiendo desde la línea de transmisión en reposo, cuando tiene el nivel lógico 1, el emisor informa al receptor de que va a llegar un carácter, para ello antepone un bit de arranque (Start) con el valor lógico 0. Una vez que el bit Startllega al receptor este disparará un reloj interno y se quedará esperando por los sucesivos bits que contendrá la información del carácter transmitido por el emisor.
+                    </p>
+                <p class="text">RS-232 (Recommended Standard 232, en español: "Estándar Recomendado 232"), también conocido como EIA/TIA RS-232C, es una interfaz que designa una norma  para el intercambio de datos binarios serie entre un Equipo Terminal  de Datos, DTE, como por ejemplo una terminal o Equipo de Comunicación de Datos, DCE, por ejemplo un  Modem.
+
+                    Existen otros casos en los que también se utiliza la interfaz RS-232. Una definición equivalente publicada se denomina V.24.
+                    Conector RS-232 (DB-9 hembra).
+                    Tarjeta PCI  con conectores RS-232 macho.
+                    En particular, existen ocasiones en que interesa conectar otro tipo de equipamientos, como pueden ser computadoras. Evidentemente, en el caso de interconexión entre los mismos, se requerirá la conexión de un DTE con otro DTE. Para ello se utiliza una conexión entre los dos DTE sin usar módem, por ello se llama módem nulo (null modem).
+                    El RS-232 consiste en un conector tipo DB 25 (de 25 pines), aunque es normal encontrar la versión de 9 pines (DB 9) más barato e incluso más extendido para cierto tipo de periféricos (como el mouse serie de la PC).
+                    </p>
+                <p class="text">La velocidad de transmisión de datos mide el tiempo que tarda un host  o un servidor en poner en la línea de transmisión el paquete de datos a enviar. El tiempo de transmisión se mide desde el instante en que se pone el primer bit en la línea hasta el último bit del paquete a transmitir. La unidad de medida utilizada es en bits/segundo (b/s o también bps), o expresado en octetos o bites (B/s)n ya que así puede hacer la transmisión de datos.
+                </p>
+                <p class="text">En las telecomunicaciones, la banda de frecuencia es el intervalo de frecuencias entre dos límites establecidos que condicionan su aplicación.
+                </p>
+                <p class="text">Ancho de Banda
+ 
+                    El concepto de ancho de banda es uno de los más importantes y actuales en el campo de las telecomunicaciones. Se denomina ancho de banda de una señal a lo siguiente:
+                     
+                    Se puede definir como:
+                    La cantidad de información que puede fluir a través de una conexión de red en un período dado.
+                     
+                    Importancia del Ancho de Banda
+                     
+                    Es esencial comprender el concepto de ancho de banda al estudiar redes, por las siguientes cuatro razones:
+                     
+                    El ancho de banda es finito. Independientemente del medio que se utilice para construir la red, existen límites para la capacidad de la red para transportar información. El ancho de banda está limitado por las leyes de la física y por las tecnologías empleadas para colocar la información en los medios.
+                    El ancho de banda no es gratuito. Comprender el significado del ancho de banda, y los cambios en su demanda a través del tiempo, pueden ahorrarle importantes sumas de dinero a un individuo o a una empresa.
+                    El ancho de banda es un factor clave a la hora de analizar el rendimiento de una red, diseñar nuevas redes y comprender la Internet. La información fluye en una cadena de bits de una computadora a otra en todo el mundo. Estos bits representan enormes cantidades de información que fluyen de ida y de vuelta a través del planeta en segundos, o menos. En cierto sentido, puede ser correcto afirmar que la Internet es puro ancho de banda.
+                    El ancho de banda es fundamental para el desempeño de la red. No bien se construyen nuevas tecnologías e infraestructuras de red para brindar mayor ancho de banda, se crean nuevas aplicaciones que aprovechan esa mayor capacidad. La entrega de contenidos de medios enriquecidos a través de la red, incluyendo video y audio fluido, requiere muchísima cantidad de ancho de banda.
+                     
+                    El ancho de banda se define como la cantidad de información que puede fluir a través de una red en un período dado. La idea de que la información fluye, sugiere dos analogías que podrían facilitar la visualización del ancho de banda en una red:
+                     
+                    El ancho de banda es similar al diámetro de un caño. Una red de tuberías trae agua potable a los hogares y las empresas y se lleva las aguas servidas. Esta red de agua está compuesta de tuberías de diferentes diámetros. Las principales tuberías de agua de una ciudad pueden medir dos metros de diámetro, en tanto que la tubería de un grifo de cocina puede medir apenas dos centímetros. El ancho de la tubería determina su capacidad de transporte de agua. Por lo tanto, el agua es como los datos, y el ancho de la tubería es como el ancho de banda.
+                    </p>
+                <p class="text">El ancho de banda es finito. Independientemente del medio que se utilice para construir la red, existen límites para la capacidad de la red para transportar información. El ancho de banda está limitado por las leyes de la física y por las tecnologías empleadas para colocar la información en los medios.
+                    El ancho de banda no es gratuito. Comprender el significado del ancho de banda, y los cambios en su demanda a través del tiempo, pueden ahorrarle importantes sumas de dinero a un individuo o a una empresa.
+                    El ancho de banda es un factor clave a la hora de analizar el rendimiento de una red, diseñar nuevas redes y comprender la Internet. La información fluye en una cadena de bits de una computadora a otra en todo el mundo. Estos bits representan enormes cantidades de información que fluyen de ida y de vuelta a través del planeta en segundos, o menos. En cierto sentido, puede ser correcto afirmar que la Internet es puro ancho de banda.
+                    El ancho de banda es fundamental para el desempeño de la red. No bien se construyen nuevas tecnologías e infraestructuras de red para brindar mayor ancho de banda, se crean nuevas aplicaciones que aprovechan esa mayor capacidad. La entrega de contenidos de medios enriquecidos a través de la red, incluyendo video y audio fluido, requiere muchísima cantidad de ancho de banda.
+                     
+                    El ancho de banda se define como la cantidad de información que puede fluir a través de una red en un período dado. La idea de que la información fluye, sugiere dos analogías que podrían facilitar la visualización del ancho de banda en una red:
+                     
+                    El ancho de banda es similar al diámetro de un caño. Una red de tuberías trae agua potable a los hogares y las empresas y se lleva las aguas servidas. Esta red de agua está compuesta de tuberías de diferentes diámetros. Las principales tuberías de agua de una ciudad pueden medir dos metros de diámetro, en tanto que la tubería de un grifo de cocina puede medir apenas dos centímetros. El ancho de la tubería determina su capacidad de transporte de agua. Por lo tanto, el agua es como los datos, y el ancho de la tubería es como el ancho de banda.
+                    </p>
+                <p class="text">Una conexión simétrica ofrece la misma velocidad de subida que de bajada. Es decir, la misma velocidad con que cargas los datos será de la que dispondrás para bajarlos. En el caso de las conexiones asimétricas, la velocidad de carga será siempre inferior a la velocidad de descarga.
+
+                    El DSL asimétrico (ADSL) ofrece mucho más ancho de banda para las descargas al sacrificar el ancho de banda disponible para las cargas. Por el contrario, el DSL simétrico (HDSL) soporta el mismo ancho de banda en ambas direcciones. Los servicios de Internet para uso doméstico normalmente soportan ADSL porque los usuarios típicos de Internet tienden a descargar muchos más datos de los que cargan.
+
+
+                    </p>
+                <p class="text">Una conexión simétrica ofrece la misma velocidad de subida que de bajada. Es decir, la misma velocidad con que cargas los datos será de la que dispondrás para bajarlos. En el caso de las conexiones asimétricas, la velocidad de carga será siempre inferior a la velocidad de descarga.
+
+                    El DSL asimétrico (ADSL) ofrece mucho más ancho de banda para las descargas al sacrificar el ancho de banda disponible para las cargas. Por el contrario, el DSL simétrico (HDSL) soporta el mismo ancho de banda en ambas direcciones. Los servicios de Internet para uso doméstico normalmente soportan ADSL porque los usuarios típicos de Internet tienden a descargar muchos más datos de los que cargan.
+
+
+                    </p>
+                <p class="text">Tasa de Error
+ 
+                    La tasa de errores está relacionada con la cantidad de bits transmitidos de manera errónea en una sesión de transmisión de datos. La transmisión puede ser efectuada a través de medios analógicos o digitales, pero la tasa de errores está referida siempre a la recepción en forma digital de los datos en el receptor
+                     
+                    Se denomina tasa de errores sobre un equipo terminal de datos, que actúa como receptor, a la relación entre los bits recibidos de manera errónea respecto a la cantidad total de bits transmitidos.
+                     
+                    </p>
+                <p class="text">Un códec es un programa o dispositivo hardware capaz de codificar o decodificar una señal o flujo de datos digitales. Códec es un acrónimo de codificador-decodificador o, menos comúnmente, compresor-descompresor
+
+                    Codec
+                        Es una abreviatura de Codificador-Decodificador. Describe una especificación implementada en software, hardware o una combinación de ambos, capaz de transformar un archivo con un flujo de datos (stream) o una señal. Los codecs pueden codificar el flujo o la señal (a menudo para la transmisión, el almacenaje o el cifrado) y recuperarlo o descifrarlo del mismo modo para la reproducción o la manipulación en un formato más apropiado para estas operaciones. Los codecs son usados a menudo en videoconferencias y emisiones de medios de comunicación.
+                    Típicamente los códec tienen un procesamiento asimétrico, es decir que están diseñados para descomprimir video más rápido que lo que tarda en comprimirlo. Esto beneficia al play back (reproducción de archivos guardados en un file system) de un video en tiempo real.
+                        La mayor parte de los codecs provoca pérdidas de información para conseguir un tamaño lo más pequeño posible del archivo destino. Hay también codecs sin pérdidas, pero en la mayor parte de aplicaciones prácticas, para un aumento casi imperceptible de la calidad no merece la pena un aumento considerable del tamaño de los datos. La excepción es si los datos sufrirán otros tratamientos en el futuro. En este caso, una codificación repetida con pérdidas a la larga dañaría demasiado la calidad.
+                        Muchos archivos multimedia contienen tanto datos de audio como de vídeo, y a menudo alguna referencia que permite la sincronización del audio y el vídeo. Cada uno de estos tres flujos de datos puede ser manejado con programas, procesos, o hardware diferentes; pero para que estos streams sean útiles para almacenarlos o transmitirlos, deben ser encapsulados juntos. Esta función es realizada por un formato de archivo de vídeo (contenedor), como .mpg, .avi, .mov, .mp4, .rm o wmv. Algunos de estos formatos están limitados a contener streams que se reducen a un pequeño juego de codecs, mientras otros son usados para objetivos más generales.
+                    De las transformaciones ofrecidas por los codecs, se utilizan las más comunes para conseguir:
+                    Transmisión: Convertir una señal de analógica a digital y viceversa
+                    Compresión: Comprimir y descomprimir datos, para maximizar el provecho de dispositivos de almacenaje
+                    Encriptación: Convertir datos a un formato legible solo mediante contraseña, para administrar el acceso informático
+                    </p>
+
+            <iframe src="./assets/Clase1-redes2.pdf" width="1000" height="600" style="border: none;"></iframe>
+            <p class="text">IP Basica como una red sin conexiones
+
+                Una red IP Networking hace más fácil el escalamiento
+                Servicios y aplicaciones no estáticamente vinculadas con la infraestructura de la red
+                Mantiene la complejidad fuera del nucleo de la red
+                Permite la rápido creación de nuevos servicios
+                Diseñada para compartir información
+
+                Permiso para decisiones autónomas mediante nodos de red procesando cada paquete
+                Los paquetes transportan globalmente direcciones con sentido
+                Procesamiento distribuido a través de toda la red
+                Provee redundacía, mejora la escalabilidad
+                </p>
+            <p class="text">Una señal formada por varias frecuencias es propensa a la distorsión por retardo causada por la impedancia, la cual es la resistencia al cambio de las diferentes frecuencias. Esta puede provocar que los diferentes componentes de frecuencia que contienen las señales lleguen fuera de tiempo al receptor</p>
+            <p class="text">Ruido es toda perturbación electromagnética que afecta a un circuito de comunicaciones, toda señal parásita no propia del comportamiento booleano del circuito y que, por tanto, puede producir errores al modificar los valores de señal correctos.
+                Cuando se transmiten señales por un canal, el efecto del ruido se pone de manifiesto en el número de errores que comete el receptor. Se deduce inmediatamente que dicho número es tanto mayor cuanto más grande sea la probabilidad de error. La probabilidad de error depende del valor de la relación señal/ruido.
+                </p>
+            <p class="text">El CRC es un código de detección de error cuyo cálculo es una larga división de computación en el que se descarta el cociente y el resto se convierte en el resultado, con la importante diferencia de que la aritmética que usamos conforma que el cálculo utilizado es el arrastre de un campo, en este caso los bits.
+            </p>
+            <p class="text">Protocolo directo:
+                Es aquel en que los sistemas comparten una línea punto a punto y se comunican directamente, sin intervención de otros agentes.
+                Protocolo indirecto:
+                En este caso los sistemas se conectan a través de una red conmutada o agente activo. Aquí no es posible la aplicación del protocolo directo, y ambos extremos dependen del funcionamiento de otras entidades y/o redes para su intercambio de datos.
+                Protocolo monolítico:
+                En este tipo de protocolo, un solo módulo o subsistema tiene a cargo toda la tarea de la comunicación. Una modificación en cualquiera de los detalles implica que toda la aplicación debería modificarse, con el inconveniente de recompilar o, lo que es peor, que se produzcan errores difíciles de localizar.
+                Protocolo estructurado:
+                Al contrario que en la definición anterior, un protocolo estructurado se compone de varios protocolos más simples, organizados jerárquicamente o en capas, donde las entidades de nivel superior ofrecen servicios a las de nivel inferior para llevar a cabo el proceso de comunicación.
+                Protocolo simétrico:
+                Involucra entidades pares (o sea, misma lógica y misma jerarquía).
+                Protocolo asimétrico:
+                la asimetría es consecuencia de buscar la sencillez en una de las entidades, o debido a la naturaleza del intercambio (por ejemplo un proceso cliente-servidor)
+                Protocolo normalizado:
+                Es aquel que permite ser utilizado en muchas implementaciones diferentes, lo cual facilita la interoperatividad entre equipos de diferentes fabricantes.
+                Protocolo no normalizado:
+                Está diseñado para una situación o equipo específicos.
+                </p>
+            <p class="text">Las funciones de un protocolo pueden agruparse en varias categorías:
+                Segmentación y Ensamblado: en el intercambio de información puede necesitarse o resultar más conveniente dividir los datos en bloques de tamaño menor antes de transmitirlos, para luego ensamblarse nuevamente en el destino.
+                Encapsulamiento: es el proceso de agregar información de control a los datos, como puede ser la suma de comprobación para la detección de errores.
+                Control de conexión: algunos protocolos utilizan la transferencia de datos “no orientada a conexión”, donde cada paquete de datos es tratado independiente de los demás, y otros utilizan la “orientada a conexión”, en donde se dan las fases de establecimiento de la conexión, transferencia de datos y finalización de la misma.
+                Entrega en orden: los protocolos que utilizan esta función se aseguran que los datos son recibidos en el mismo orden en que fueron enviados.
+                Control de flujo: es una función realizada por la entidad receptora para limitar la velocidad o cantidad de datos que envía la entidad emisora.
+                Control y detección de errores: comprende el uso de técnicas para gestionar las pérdidas o errores de datos.
+                Direccionamiento: las funciones de direccionamiento abarcan un gran número de cuestiones, como el nivel de direccionamiento, su ámbito, los identificadores de conexión y su modo.
+                </p>
+            <p class="text">Están Unidos a través de la Capa Física.
+            </p>
+            <p class="text">La capa física se refiere al medio de comunicación físico y a las tecnologías para transmitir datos a través de ese medio. En esencia, la comunicación de datos es la transferencia de señales digitales y electrónicas a través de varios canales físicos, como cables de fibra óptica, cableado de cobre y aire.
+            </p>
+            <p class="text">ACCESS: Servicios de acceso remoto, acceso local shared y swítched, filtrado de direcciones MAC y segmentación. Agregación de VPN’s. Switches de acceso.
+
+                DISTRIBUTION: Listas de acceso, listas de distribución, sumarización de rutas, enrutamiento de VLANs, políticas de seguridad, filtros, agregación, encripción, compresión y calidad de servicio. Routers de alta velocidad y switches de capa 3.
+
+
+                CORE: Transporte de alta velocidad, elevada confiabilidad, redundancia y baja latencia. Conexiones entre sitios. Switches de alta velocidad. No comprimir, filtrar, encriptar u otras cargas de procesamiento</p>
         </section>
 
     </main>
