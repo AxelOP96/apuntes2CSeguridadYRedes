@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Raleway", sans-serif;
+    background-color: #f8b5b5;
+    color: #882e58;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    background-color: #882e58;
+    color: #f8b5b5;
+    height: 200px;
+}
+.courses ul{
+    display: flex;
+    justify-content: space-between;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav ul li, .courses ul li{
+    list-style: none;
+    padding: 30px;
+}
+
+.nav ul li a, .courses ul li a{
+    text-decoration: none;
+    color: #e668a3;
+}
+.nav ul li a:active,
+.nav ul li a:hover{
+    text-shadow: #211f20;
+}
+.container{
+    margin: 20px auto;
+    width: 80%;
+}
+.content{
+    padding: 10px;
+}
+.title, .subtitle{
+    text-align: center;
+    margin: 20px 0;
+}
+.link{
+    color: #e668a3;
+}
+.icon{
+    max-width: 200px;
+    max-height: 50px;
+}
+.icon-small{
+    width: 60px;
+    max-width: 80px;
+}
+.icon-large{
+    max-width: 400px;
+}
+img{
+    max-width: 600px;
+}
+.text{
+    margin: 10px 0;
+}
+.tag{
+    display: inline-block;
+    margin: 1em 0;
+    color: #dfdfee;
+    background-color: #B33771;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 4px 3px 12px 0px rgb(171, 102, 135);
+}
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
