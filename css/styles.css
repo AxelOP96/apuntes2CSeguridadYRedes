@@ -13,7 +13,7 @@ body{
     flex-direction: column;
     background-color: #882e58;
     color: #f8b5b5;
-    height: 200px;
+    height: 100px;
 }
 .courses ul{
     display: flex;
