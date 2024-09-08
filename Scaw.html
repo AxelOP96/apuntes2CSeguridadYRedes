@@ -53,11 +53,12 @@
                 que se aprovecha de una vulnerabilidad en el sistema para
                 conseguir acceder a un área o dispositivo sin autorización con el
                 objetivo de realizar actividades ilegítimas.</p>
-            <p class="text"><span class="tag">Riesgo:</span> </p>
+            <p class="text"><span class="tag">Riesgo: Probabilidad de que me pueda pasar algo no deseado.</span></p>
             <p class="text"><span class="tag">Amenaza:</span> </p>
             <p class="text"><span class="tag">No repudio:</span> </p>
             <p class="text"><span class="tag">Vulnerabilidades:</span>  Caracteristica propia que me expone a un riesgo</p>
             <p class="text"><span class="tag">Anonimato:</span> Ejecutar una acción y no se relaciona a la persona con la acción en si.</p>
+            <h3>Contenedores de la información</h3>
             <p class="text"><span class="tag">Sistemas aislados</span> tienden a ser mas seguros, por su barrera fisica. Los sistemas interconectados son más utilizados</p>
             <p class="text"><span class="tag">Causas de inseguridad:</span><br> ●Un estado de inseguridad activo; es decir, la falta de conocimiento del usuario acerca de las funciones del sistema, algunas de las cuales pueden ser dañinas para el sistema (por ejemplo, activar servicios de red que el usuario no necesita) <br>
                 ●Un estado de inseguridad pasivo; es decir, la falta de
@@ -107,8 +108,8 @@
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
-            <h3>U1 Anexo: Comprobadores de integridad</h3>
-            <iframe src="./assets/U1-Anexo-2.pdf" width="1000" height="600" style="border: none;"></iframe>
+            <h3>U1 Anexo: Introducción a la seguridad</h3>
+            <iframe src="./assets/U1-Introduccion-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
@@ -133,21 +134,120 @@
         <hr>
         <section class="class">
             <h2 class="subtitle">Clase 2:</h2>
-
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
+            <p class="text">Categorias de Caracteristica sensitiva: no sensitiva(expuesta a cualquier persona sin generar ninguna restriccion ni causar ningún conflicto), sensitiva() y sensitiva-personal()</p>
+            <h3>Funciones de Hash</h3>
+            <p class="text">Es una función o método no reversible para generar un valor que represente de manera casi univoca a un dato. Ante el mismo archivo de entrada A siempre me devuelve el archivo de salida B.</p>
+            <iframe src="./assets/U1-ANEXO-Comprobadores-de-integridad.pdf" width="1000" height="600" style="border: none;"></iframe>
+            <p class="text">OpenSSL: Software para el uso de criptografia de proposito general y comunicación segura.</p>
+            <img src="./assets/algo.png" alt="">
+            <p class="text">Ejemplo de Hashing</p>
+            <img src="./assets/ejemplo.png" alt="">
+            <p class="text">Cualquier valor que ingrese altera los valores de salida</p>
+            <p class="text">Hashdeep: Verifica la integridad de todo un directorio. Es un verificador de dos tiempos, es decir, toma una "foto" del directorio y posteriormente compara los archivos con esa foto.</p>
+            <img src="./assets/ejemplo2.png" alt="">
+            <p class="text">Tripwire detecta cambios, genera una BD local cifrada y contempla el manejo de politicas para separar areas importantes y areas irrelevantes.</p>
+            <iframe src="./assets/U1-Introduccion-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
+            <p class="text">Seguridad Lógica: Consiste en la aplicación de barreras y procedimientos que resguarden el acceso a los datos y sólo se permita acceder a ellos a las personas autorizadas para hacerlo</p>
+            <p class="text">Seguridad Lógica <br>
+                ●Controles de Acceso<br>
+                ●Identificación y Autentificación<br>
+                ●Roles<br>
+                ●Transacciones<br>
+                ●Limitaciones a los Servicios<br>
+                ●Modalidad de Acceso<br>
+                ●Ubicación y Horario<br>
+                ●Control de Acceso Interno<br>
+                o    Palabras Claves (Passwords)<br>
+                o    Cifrado<br>
+                o    Listas de Control de Accesos<br>
+                o    Límites sobre la Interfaz de Usuario<br>
+                o    Etiquetas de Seguridad </p>
+            <p class="text">Transacción: Operación compuesta por varias actividades pero deben comportarse de manera atómica. </p>
+            <p class="text">●Control de Acceso Externo<br>
+                o Dispositivos de Control de Puertos<br>
+                o Firewalls o Puertas de Seguridad<br>
+                o Acceso de Personal Contratado o Consultores<br>
+                o Accesos Públicos<br>
+                ●Administración<br>
+                o Administración del Personal y Usuarios -
+                Organización del Personal            </p>
+                <p class="text">Practicas de Seguridad Lógica en móviles<br>
+                    ● Usar contraseñas robustas y bloqueo automático<br>
+                    ● Realizar copias de seguridad periódicas<br>
+                    ● Instalar software solo de fuentes oficiales.<br>
+                    ● Utilizar software solo con acceso legal a sus funcionalidades.<br>
+                    ● Considerar el uso de software de seguimiento, borrado de
+                    datos y/o bloqueo remoto.<br>
+                    ● Evitar o restringir conexiones a redes publicas o no confiables.<br>
+                    ● Deshabilitar sistemas de Bluetooth, NFC y otras tecnologías<br>
+                    inalámbricas cuando no se requiera el uso de los mismos en
+                    dispositivos confiables.
+                    ● En dispositivos con conexión de datos móviles tener el PIN
+                    activado y su el PUK e IMEI memorizado.</p>
+            <h3>BYOD</h3>
+            <p class="text">Es una política empresarial para el uso de dispositivos tecnológicos que
+                se caracteriza por permitir a los empleados el uso de sus propios
+                dispositivos personales (portátiles,smartphones, tablets) para el trabajo,
+                así como también el acceso desde los mismos a las redes corporativas,
+                aceptando su uso compartido para las tareas profesionales como para
+                las personales.</p>
+            <p class="text">Rastreo y gestión remota de dispositivos
+                Este tipo de software permite realizar operaciones de forma remota
+                sobre el equipo permitiendo el siguiente tipo de acciones:
+                ● Rastreo del dispositivo
+                ● Borrado de datos
+                ● Bloqueo del dispositivo
+                ● Obtención de información del medio (grabación de audio, vídeo),
+                etc..
+                Son aplicaciones particularmente útiles ante situaciones de pérdida y
+                robo.
+                Su funcionalidad suele estar limitada por la conectividad del equipo.</p>
+            <p class="text">Copias de seguridad: planear como backupear, para saber que, como y cuando realizar una copia </p>
+            <p class="text">Elementos comunes en el manejo de la seguridad lógica:
+            ● Firewalls
+            ● Firewalls personales
+            ● Escaners de vulnerabilidades
+            ● Honeypots, Honeynets, Padded cells(sistemas que se usan para aislar distintos tipos de ataques no conocidos)
+            ● Verificadores de integridad
+            ●
+            IDS(Intrusion Detection System)
+            ●
+            IPS(Intrusion Protection System)
+            ● Antivirus
+            ● WAF(Web Application Firewall)
+            </p>
+            <p class="text">VPN: Una estructura de red que con soporte lógico que permite el trafico de
+                información privada sobre una infraestructura de red pública mediante el
+                uso de criptografía.</p>
+                <h3>Seguridad física</h3>
+            <p class="text">Consiste en mecanismos destinados a proteger
+                físicamente cualquier recurso del sistema de
+                amenazas producidas tanto por el hombre como
+                por la naturaleza; en general serán prevención y
+                detección.</p>
+            <p class="text">●Tipos de Desastres
+                oDesastres naturales, incendios accidentales tormentas e inundaciones.
+                oDisturbios, sabotajes internos y externos deliberados.
+                oAmenazas ocasionadas por el hombre.
+                ●Acciones Hostiles
+                oRobo
+                oFraude
+                oSabotaje
+                ●Control de Accesos
+                oUtilización de Guardias
+                oUtilización de Detectores de Metales
+                oUtilización de Sistemas Biométricos
+                oVerificación Automática de Firmas (VAF)
+                oSeguridad con Animales
+                oProtección Electrónica</p>
+                <h3>Impacto en la organización</h3>
+            <p class="text">Perdida de datos: puede afectar la reputación, la productividad y la rentabilidad de la organización. <br>
+            Robo de identidad: Puede afectar alos clientes y empleados de la organización. <br>
+            Interrupción del negocio: Puede causar daños economicos y afectar la imagen de la organización <br>
+            Daño a la reputación: Puede afectar la confianza de los clientes y socios de la organización.</p>
             <p class="text"></p>
         </section>
+        <hr>
         <section class="class">
             <span class="tag">
                 <a href="https://drive.google.com/drive/folders/1w4VJx8bUB0IHgXEc7Wx7X2An52QNQNwh?usp=sharing" target="_blank">Parciales</a>
