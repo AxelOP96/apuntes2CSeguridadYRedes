@@ -330,6 +330,71 @@
                     <iframe src="./assets/U2-Amenazas-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
                 </div>
             </div>
+            <p class="text">Debilidad: riesgo general</p>
+            <p class="text">Vulnerabilidad: riesgo propio con más detalles</p>
+            <p class="text">Botnet: genera una actividad sincronizada contra el usuario.</p>
+            <div class="pdf-wrapper"></div>
+                <h3 class="pdf-title">U2 Anexo SAST PMD</h3>
+                <div class="pdf-container">
+                    <iframe src="./assets/U2-Amenazas-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
+                </div>
+            </div>
+            <p class="text"><span class="tag">PMD:</span> es una herramienta de análisis estático que se utiliza para revisar y mejorar la calidad del código fuente. Esto permite a los desarrolladores mejorar la calidad y mantenibilidad de su software.</p>
+            <h3>OWASP: Riesgos de seguridad en aplicaciones:</h3>
+            <p class="text">AppSec Labs <br>
+            Cobalt.io <br>
+            GitLab <br></p>
+            <p class="text"><span class="tag">Tasa de incidencia:</span> Porcentaje de la población de aplicaciones que tiene al menos una instancia de un tipo de vulnerabilidad.</p>
+            <p class="text"><strong>Factores de datos:</strong>  <br>
+            CWEs mapeadas <br>
+            Tasa de incidencia <br>
+            Cobertura
+            <br>Explotabilidad ponderada <br>
+            Impacto ponderado <br>
+            Total de ocurrencias <br>
+            Total de CVEs</p>
+            <h3>Top ten riesgos 2021</h3>
+            <p class="text">1-Pérdida del control de acceso</p>
+            <p class="text">2-Fallas criptográficas</p>
+            <p class="text">3-Inyección</p>
+            <p class="text">4-Diseño inseguro</p>
+            <p class="text">5-Configuración de seguridad incorrecta</p>
+            <p class="text">6-Componentes vulnerables y desactualizados</p>
+            <p class="text">7-Fallas de identificación y autenticación</p>
+            <p class="text">8-Fallas en el software y en la integridad de los datos</p>
+            <p class="text">9-Fallas en el registro y monitoreo</p>
+            <p class="text">10-Falsificación de solicitudes del lado del servidor</p>
+            <h3>Pérdida del control de acceso:</h3>
+            <p class="text"> Por alguna metodologia se pierde el control del usuario de la aplicación. Ejemplo: se fuerza un endpoint sin verificar si se tiene acceso a él. <strong>Referencia directa insegura a objetos:</strong> Alguien fuerza a la aplicación a que le entregue una información que no le corresponde. El backend trabaja con un indice, una referencia directa al objeto de datos.</p>
+            <img src="./assets/refdirinsobj.png" alt="">
+            <img src="./assets/ejemplo3.png" alt="">
+            <p class="text">Ejemplo de intento de escalar privilegios(se usa el navegador para cambiar el rol).</p>
+            <p class="text"><strong>Referencia directa: </strong>Se expone el identificador. </p>
+            <img src="./assets/refdir.png" alt="">
+            <p class="text">En la <strong>Referencia indirecta</strong> se usa algo intermedio, hay una conversion intermedia. Hago un proceso o algoritmo que me va a aplicar una conversión y me deja 3 elementos para ese usuario. Sin embargo para el otro grupo de elementos que le corresponde a otro usuario, mi funcion los enumera desde cero nuevamente. Hay una relación interna entre los numeros que tengo yo y los que estan en la base, sin embargo solo le devuelvo los elementos X que le corresponde</p>
+            <img src="./assets/refindir.png" alt="">
+            <p class="text"><strong> OWASP ESAPI:</strong> Utiliza diccionarios para crear una referencia indirecta, convierte una secuencia lineal y predecible en un valor con un dominio mas grande y aleatorio.</p>
+            <img src="./assets/owaspesapi.png" alt="">
+            <p class="text"><strong>Imagenes embebidas:</strong> No uso referencias, reemplazo el acceso al controlador con la informacion completa de la imagen.Se recomienda cuando el volumen de datos que va a renderizar es limitado</p>
+            <h3>Fallas Criptográficas:</h3>
+            <p class="text">La informacion puede estar almacenada,en tránsito o en procesamiento. Conviene cifrar en la app para que llegue cifrada a la bd y que no pueda ser obtenida previamente para un uso malicioso.</p>
+            <img src="./assets/fallascrip.png" alt="">
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
