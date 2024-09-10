@@ -301,7 +301,7 @@
             <p class="text"><span class="tag">DAST:</span> Scanners de vulnerabilidades.<br>
                 <span class="tag">SAST:</span> Auditores de código.<br>
                 <span class="tag">IAST:</span> Detecta vulnerabilidades en tiempo real durante la ejecución de la aplicación.<br>
-            Redes trampa:https://www.honeynet.org</p>
+            <span class="tag">Redes trampa:</span> https://www.honeynet.org</p>
             <p class="text"><span class="tag">CERT Y CSIRT:</span> Equipos reconocidos por la dirección de su organización como responsables de gestionar incidentes de seguridad informatica que le corresponden.</p>
             <p class="text"><span class="tag">DoS:</span> Ataque a un sistema de computadoras o red que causa que un servicio o recurso sea inaccesible a los usuarios legitimos.</p>
             <img src="./assets/dostipos.png" alt="">
@@ -324,7 +324,7 @@
         <hr>
         <section class="class">
             <h2 class="subtitle">Clase 4: U2</h2>
-            <div class="pdf-wrapper"></div>
+            <div class="pdf-wrapper">
                 <h3 class="pdf-title">U2 Amenazas a la seguridad</h3>
                 <div class="pdf-container">
                     <iframe src="./assets/U2-Amenazas-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
@@ -333,7 +333,7 @@
             <p class="text">Debilidad: riesgo general</p>
             <p class="text">Vulnerabilidad: riesgo propio con más detalles</p>
             <p class="text">Botnet: genera una actividad sincronizada contra el usuario.</p>
-            <div class="pdf-wrapper"></div>
+            <div class="pdf-wrapper">
                 <h3 class="pdf-title">U2 Anexo SAST PMD</h3>
                 <div class="pdf-container">
                     <iframe src="./assets/U2-Amenazas-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
@@ -377,25 +377,47 @@
             <img src="./assets/owaspesapi.png" alt="">
             <p class="text"><strong>Imagenes embebidas:</strong> No uso referencias, reemplazo el acceso al controlador con la informacion completa de la imagen.Se recomienda cuando el volumen de datos que va a renderizar es limitado</p>
             <h3>Fallas Criptográficas:</h3>
-            <p class="text">La informacion puede estar almacenada,en tránsito o en procesamiento. Conviene cifrar en la app para que llegue cifrada a la bd y que no pueda ser obtenida previamente para un uso malicioso.</p>
+            <p class="text">La informacion puede estar almacenada,en tránsito o en procesamiento. Conviene cifrar en la app para que llegue cifrada a la bd y que no pueda ser obtenida previamente para un uso malicioso, el problema es la performance. Si lo hiciera mas abajo como en la bd o el fylesystem tendria mas performance pero seria mas inseguro.</p>
             <img src="./assets/fallascrip.png" alt="">
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
+
+        </section>
+        <hr>
+        <section class="class">
+            <h2 class="subtitle">Clase 5: </h2>
+            <div class="pdf-wrapper">
+                <h3 class="pdf-title">U2 Amenazas a la seguridad</h3>
+                <div class="pdf-container">
+                    <iframe src="./assets/U2-Amenazas-a-la-Seguridad.pdf" width="1000" height="600" style="border: none;"></iframe>
+                </div>
+            </div>
+            <p class="text">La vulnerabilidad es una debilidad detectada, implementada en un producto, entonces la vulnerabilidad es más específico, propio de un producto en particular y/o versión. En cambio, la debilidad es algo más general como las malas prácticas, manera equivocada de usar un recurso de programación.</p>
+            <p class="text">¿Cómo podria estar escuchando una aplicación web o una aplicación móvil? A traves de Man in the middle y con sniffers</p>
+            <h3>Inyección:</h3>
+            <p class="text">Inyección y Cross-site, ocurren cuando datos no confiables son enviados al interprete como parte de un comando o consulta. </p>
+            <img src="./assets/inyeccion.png" alt="">
+            <h4>Medidas de prevención:</h4>
+            <p class="text">Uso de APIs con manejo parametrizado de interpretes o una herramienta de ORM</p>
+            <p class="text">Se puede sanitizar para frenar cuando no hay parametros, uno puede removerlos o reemplazarlos para que no sean interpretables.</p>
+            <p class="text">Validación de entrada positiva o lista blanca, REGEX. Antes de tomar el dato reviso que este en un formato esperado.</p>
+            <p class="text">Establecer un limite en las queries.</p>
+            <h3>CSRF:</h3>
+            <p class="text">La aplicación permite que los usuarios envien peticiones de cambio de estado, generalmente en una imagen, iframe, en lugar de cargar la imagen envia la peticion HTTP falsa. Se evita esto con un token unico y no predecible.</p>
+            <h3>XSS-Cross Site Scripting</h3>
+            <p class="text">La aplicación toma datos no confiables y los envia al navegador web sin una validacón y codificación apropiada. Se usa para sesuestrar sesiones de usuario, destruir sitios web o redirigir al usuario a un sitio malicioso.</p>
+            <p class="text"><span class="tag">XSS Reflejado:</span> Se busca que el usuario dispare una instruccion JS hacia el servidor y se devuelve con una solicitud o codigo.</p>
+            <p class="text"><span class="tag">XSS Almacenado:</span>Se realiza en dos tiempos, el primero el atacante busca como atacar y deposita un codigo JS, el segundo el usuario consulta la página web y recibe el codigo JS a la victima.</p>
+            <p class="text"><span class="tag">XSS Basados en DOM:</span> </p>
+            <p class="text">Buscan generar modificaciones en la estructura DOM de la pagina.</p>
+            <img src="./assets/xss.png" alt="">
+            <h3>Diseño inseguro:</h3>
+            <p class="text">Se basa en las elecciones del diseño al momento de iniciar el trabajo de preparación de una aplicación. Actualmente como flujo de recuperación de credenciales un segundo factor de autenticación.</p>
+            <h3>Configuración de Seguridad Incorrecta:</h3>
+            <p class="text">Una buena seguridad requiere un marco, servidor de aplicación, plataforma. Estas configuraciones deben ser establecidas, mantenidas ya que no son seguras por defecto, la mayoria de lo productos son funcionales por defecto.</p>
+            <h3>Entidad Externa de XML(XXE):</h3>
+            <p class="text">XML es un lenguaje de etiquetas, se puede usar para armar estructuras. </p>
+            <h3>Componentes Vulnerables y Desactualizados:</h3>
+            <p class="text">Si un componente vulnerable es explotado, podria darse lugar a un ataque que pueda facilitar una seria pérdida de datos o comprometer al servidor.</p>
+            <p class="text">Hay que identificar componentes y la versión que están ocupando, incluyendo dependencias. Establecer politicas de seguridad, pasar tests de seguridad y licencias aceptables. Agregar capas de seguridad a componentes vulnerables.</p>
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
@@ -408,14 +430,12 @@
         </section>
     </main>
     <script>
-        // Selecciona todos los títulos
         const titles = document.querySelectorAll('.pdf-title');
 
         titles.forEach(title => {
             title.addEventListener('click', () => {
                 const container = title.nextElementSibling;
                 const isVisible = container.style.display === 'block';
-                // Oculta todos los contenedores
                 document.querySelectorAll('.pdf-container').forEach(pdf => pdf.style.display = 'none');
                 // Muestra el contenedor asociado al título clicado
                 container.style.display = isVisible ? 'none' : 'block';
