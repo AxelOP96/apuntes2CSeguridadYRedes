@@ -96,6 +96,12 @@ img{
     flex-direction: column;
     gap: 5px;
 }
+.questions{
+    list-style-type: upper-latin;
+}
+.correct{
+    background-color: rgb(96, 222, 96);;
+}
 /*Esconder y mostrar el pdf*/
 .pdf-container {
     display: none;
