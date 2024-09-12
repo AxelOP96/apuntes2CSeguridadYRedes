@@ -100,7 +100,10 @@ img{
     list-style-type: upper-latin;
 }
 .correct{
-    background-color: rgb(96, 222, 96);;
+    background-color: rgb(96, 222, 96);
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
 }
 /*Esconder y mostrar el pdf*/
 .pdf-container {
