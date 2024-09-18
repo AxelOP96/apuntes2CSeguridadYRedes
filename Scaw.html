@@ -474,24 +474,30 @@
             <h2 class="subtitle">Clase 6:</h2>
             <p class="text">Inyección del lado del cliente se hace con JS y se conoce como XSS.</p>
             <p class="text">Inyección del lado del servidor generalmente se hace con SQL. Se recomienda el uso de ORMs para evitarlas</p>
-            <p class="text">CSRF es una solicitud forzada de HTTP. Ejemplo: infiltrar una imagen para invocar una solicitud al backend.</p>
+            <p class="text">CSRF es una solicitud forzada de HTTP. Ejemplo: infiltrar una imagen para invocar una solicitud al backend. Se previene con un token único e impredecible.</p>
             <p class="text">XSS: </p>
-            <p class="text">Diseño inseguro: Basado en decisiones tempranas de una aplicación.</p>
-            <p class="text">Configuración de seguridad incorrecta: las configuraciones son incorrectas o no son mantenidas en el tiempo.</p>
-            <p class="text">Entidad XML:</p>
-            <p class="text">XXE: Expresiones no parseables pero que el parsed podria ser reemplazado. Hay 5 entidades por defecto: </p>
+            <p class="text">Diseño inseguro: Basado en decisiones de fase tempranas de una aplicación.</p>
+            <p class="text">Configuración de seguridad incorrecta: las configuraciones son incorrectas o no son mantenidas en el tiempo.  Ejemplo: dejar una consola como está instalada por defecto.</p>
+            <p class="text">Entidad XML: expresiones no parseables, pero que el parsed podia identificar y reemplazar por otro valor.</p>
+            <p class="text">XXE: Expresiones no parseables pero que el parsed podria ser reemplazado. Hay 5 entidades por defecto: ampersand, mayor, menor, </p>
             <p class="text">Componentes vulnerables y desactualizados: Identificar componentes para tomar medidas</p>
-            <p class="text">Fallas de identificacion y </p>
+            <p class="text">Fallas de identificacion y autenticación: Alinear politicas de la empresa con rotación de contraseñas, gestionar el ciclo de vida de la sesión..</p>
+            <p class="text">Fallas en el software y en la integridad de los datos: Dependencia de plugins, repositorios o CDN no confiables, asi como actualizaciones automáticas adulteradas o alteraciones de objetos o datos serializados.</p>
+            <p class="text">Deserialización insegura: La serialización es preparar información para que pueda ser comunicada con la idea de que yo pueda poner de forma segura esa informacion y después pueda ser recuperada. Se serializa información que está en memoria.</p>
+            <p class="text">Medidas de prevención: No aceptar objetos serializados de fuentes no confiables.</p>
+            <p class="text">Fallas en el registro y en monitoreo: Registrar lo que hace la aplicación y monitorear cuando existen comportamientos inesperados o un volumen grande de errores. Como prevención se usa los logs </p>
+            <p class="text">Falsificación de solicitudes del lado del servidor (SSRF): URL HTTP desde el lado del servidor, el servidor recibe una solicitud y lo ejecuta inmediatamente. Se previene sanitizando y validando datos de entrada proporcionados por el cliente</p>
+            <p class="text">Controles proactivos: Buenas practicas alineadas con el OWASP top-ten.</p>
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
+            <div class="pdf-wrapper">
+                <h3 class="pdf-title">U1 Anexo: Protección de la información</h3>
+                <div class="pdf-container">
+                    <iframe src="./assets/U1-Anexo-2.pdf" width="1000" height="600" style="border: none;"></iframe>
+                </div>
+            </div>
         </section>
         <hr>
         <section class="class">
