@@ -863,13 +863,36 @@
             <div class="pdf-wrapper">
                 <h3 class="pdf-title">U3 Criptografía</h3>
                 <div class="pdf-container">
-                    <iframe src="./assets/" width="1000" height="600" style="border: none;"></iframe>
+                    <iframe src="./assets/U3-Criptografia-parte1.pdf" width="1000" height="600" style="border: none;"></iframe>
                 </div>
             </div>
-
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
+            <img src="./assets/teoria-cripto.png" alt="">
+            <img src="./assets/cifra-transpo.png" alt="">
+            <p class="text">Los cifradores por sustitución utilizan la técnica de modificación de cada carácter del texto en claro por otro correspondiente al alfabeto de cifrado. Si el alfabeto de cifrado es el mismo del mensaje o el único se habla de cifradores monoalfabéticos, si interviene más de un alfabeto es polialfabético.</p>
+            <img src="./assets/cifra-polialfa.png" alt="">
+            <h3>Esquemas de modificación:</h3>
+            <p class="text"><span class="tag">Binario:</span>  Representa la información a nivel de bits con 0 y 1.</p>
+            <p class="text"><span class="tag">Hexadecimal:</span> Representa la información con 16 caracteres con representación gráfica(0123456789ABCDEF) asignando 4 bits a cada carácter.</p>
+            <p class="text"><span class="tag">Base64:</span> Representa la información con 64 caracteres representables indicando con un caracter especial (=) los octetos faltantes del último bloque.</p>
+            <p class="text"><span class="tag">Algoritmos Simétricos:</span> Es un tipo de cifrado que usa una misma clave para cifrar y para descifrar. Las dos partes que se comunican mediante el cifrado simétrico deben estar de acuerdo en la clave a usar de antemano. Una vez de acuerdo, el remitente cifra un mensaje usando la clave, lo envia al destinatario y este lo descifra usando la misma clave.</p>
+            <p class="text">Dentro de las ventajas se encuentra <strong>la sencillez de implementación, la robustez, la velocidad de cifrado y la longitud del mensaje.</strong> Dentro de las desventajas está <strong>la clave debe ser compartida previamente con seguridad y la comunicación entre múltiples actores requiere numerosas claves.</strong></p>
+            <p class="text">Algoritmos simétricos de bloque:</p>
+            <img src="./assets/ejemplos-algo-bloque.png" alt="">
+            <p class="text">XOR: <br>
+            Propiedades: Es conmutativa: Es decir que A xor B = B xor A. Es asociativa:(A xor B) xor C = A xor (B xor C). Es autoinversa:(A xor B) xor B = A</p>
+            <img src="./assets/xor.png" alt="">
+            <h3>Modos de cifrado de bloques:</h3>
+            <p class="text"><span class="tag">ECB:</span> Electronic codebook, en este método el mensaje se fracciona en partes y cada una es cifrada de manera independiente.</p>
+            <img src="./assets/ecb.png" alt="">
+            <p class="text"><span class="tag">Padding:</span> los algoritmos simétricos de bloque requieren que el mensaje sea fragmentado en partes de una longitud fija; esto podria causar que el ultimo bloque sea de una longitud menor a la requerida, para esto se recurre a los métodos de padding.</p>
+            <img src="./assets/padding1.png" alt="">
+            <img src="./assets/padding2.png" alt="">
+            <p class="text"><span class="tag">CBC:</span> Cipher block chaining, en este método el mensaje se fracciona en partes y se realiza un XOR con el bloque previo antes de cifrar cada parte.</p>
+            <img src="./assets/cbc.png" alt="">
+            <p class="text"><span class="tag">CFB:</span> Cipher Feedback, en este método el mensaje se fracciona en partes, se cifra un vector de inicialización y al resultado se le realiza un XOR con el bloque del mensaje. Los bloques posteriores utilizan como entrada el texto cifrado para reemplazar al vector de inicialización.</p>
+            <img src="./assets/cfb.png" alt="">
+            <p class="text"><span class="tag">OFB:</span> Output Feedback, este método opera de manera similar a CFB con la diferencia que el bloque a ser utilizado como entrada del siguiente proceso es tomado de la salida del algoritmo justo antes de realizar el XOR.</p>
+            <img src="./assets/ofb.png" alt="">
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
