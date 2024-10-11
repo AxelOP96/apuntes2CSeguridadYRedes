@@ -895,9 +895,85 @@
             <img src="./assets/ofb.png" alt="">
             <p class="text"><span class="tag">CTR:</span> Modo de counter o contador, en este modo de operación se utiliza un "nonce" equivalente al IV anterior, que es alterado por un contador incrementado en cada bloque de datos, para obtener un valor que luego será operado con el bloque de datos usando XOR.</p>
             <img src="./assets/ctr.png" alt="">
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
+            <p class="text">Existen otros modos y algunos agregan autenticación a la confidencialidad. Ejemplo: PCBC, CCM, CWC, EAX, GCM, PCFB y XCBC</p>
+            <p class="text">Cifrado de flujo:</p>
+            <img src="./assets/cifradoflujo.png" alt="">
+            <p class="text"><span class="tag">Secuencias criptográficamente aleatorias:</span> Para que una secuencia pseudoaleatoria sea criptográficamente aleatoria, ha de cumplir la propiedad de ser impredecible. Debe ser computacionalemente intratable el problema de averiguar el siguiente número de la secuencia, teniendo total conocimiento acerca de todos los números anteriores y del algoritmo de generación empleado.</p>
+            <img src="./assets/cifradoflujoej.png" alt="">
+            <p class="text"><span class="tag">Funciones de HASH:</span> Se define como una función o método no reversible para generar un valor que represente de manera casi univoca a un dato. Los principales usos son <strong>Soporte para criptografia asimétrica, Tablas de Hash, Verificación de integridad, Soporte para procesos de autenticación.</strong></p>
+            <img src="./assets/propshash.png" alt="">
+            <p class="text">Funciones HASH - MDC:</p>
+            <img src="./assets/hashmdc.png" alt="">
+            <p class="text"><span class="tag">Message Authentication Code:</span> Adiciona criptografía al proceso de hash para aumentar la seguridad del mismo.</p>
+            <img src="./assets/hashmdc1.png" alt="">
+            <img src="./assets/hashmdc2.png" alt="">
+            <img src="./assets/hashmdc3.png" alt="">
+            <img src="./assets/hashmdc4.png" alt="">
+            <img src="./assets/hashmdc5.png" alt="">
+            <p class="text">Algoritmos asimétricos - Primos relativos:</p>
+            <p class="text">Sean a, b e Z, se dice que son <strong>Primos relativos(o coprimos) "a" y "b" si no tienen ningún factor primo en común,</strong> es decir si no tienen otro divisor común mas que 1 ó -1, o cumplen que el <strong>mcd (a,b) = 1.</strong> <br>
+            El algoritmo de Euclides extendido permite, además de encontrar un máximo común divisor de dos números enteros a y b, expresarlo como la mínima combinación lineal de esos números, es decir, encontrar números enteros s y t tales que <strong> mcd(a, b) = as + bt.</strong></p>
+            <p class="text">Algoritmos asimétricos: El sistema de cifrado de clave pública usa un par de claves para el envío de mensajes. Las dos claves pertenecen a la misma persona a la que se ha enviado el mensaje. Una clave es pública y se puede entregar a cualquier persona. La otra clave es privada y el propietario debe guardarla para que nadie tenga acceso a ella. El remitente usa la clave pública del destinatario para cifrar el mensaje y una vez cifrado solo la clave privada del destinatario podrá descifrar este mensaje. </p>
+            <img src="./assets/algoasimetr.png" alt="">
+            <img src="./assets/algoasimetr1.png" alt="">
+            <p class="text">Ejemplos: Diffie-Hellman; RSA; ElGamal; DSA; ECC, Criptografia de curva eliptica (ECDH, ECDSA...)</p>
+            <p class="text">Dentro de las ventajas se encuentra que <strong>No requiere confidencialidad en la distribución de la clave, la misma clave puede ser utilizada por múltiples actores en la comunicación y permite autentificar mensajes.</strong> Como desventajas están <strong>La velocidad del cifrado/descifrado, la longitud del mensaje limitado, el tamaño del mensaje cifrado es mayor y se requieren claves de gran extensión.</strong></p>
+            <p class="text">Este tipo de algoritmos suelen disponer de operaciones como: Generación de claves, cifrado, descifrado, firma y verificación de firma.</p>
+            <img src="./assets/algoasimetrcifra.png" alt="">
+            <p class="text">Autentificación de mensaje(Firma): Algunos algoritmos asimétricos permiten que se pueda autenticar un mensaje para garantizar su integridad. En ese caso la clave que se usa para cifrar es la clave privada, al revés que para la simple codificación de mensajes.</p>
+            <img src="./assets/rsa.png" alt="">
+            <img src="./assets/rsaejem.png" alt="">
+            <img src="./assets/firmadig.png" alt="">
+            <img src="./assets/algoasimetr1.png" alt="">
+            <img src="./assets/algoasimetr2.png" alt="">
+            <img src="./assets/algoasimetr3.png" alt="">
+            <img src="./assets/algoasimetr4.png" alt="">
+            <p class="text">El algoritmo DSA (Digital Signature Algorithm) es una parte el estándar de firma digital DSS (Digital Signature Standard), definido en el FIPS-186. Es una variante del método asimétrico de ElGamal.</p>
+            <img src="./assets/algoasimetr5.png" alt="">
+            <p class="text">Generación de la firma</p>
+            <img src="./assets/algoasimetr6.png" alt="">
+            <p class="text">Verificación de la firma</p>
+            <img src="./assets/algoasimetr7.png" alt="">
+            <h3>Algoritmos públicos y privados:</h3>
+            <p class="text">Los algoritmos públicos son aquellos cuya definición y funcionamiento se ponen a disposición pública, permitiendo que cualquier persona o entidad acceda al mismo para su evaluación o investigación. Al contrario los privados son aquellos cuyo funcionamiento interno es desconocido, son considerados menos confiables.</p>
+            <h3>HTTP vs HTTPS:</h3>
+            <p class="text"><span class="tag">HTTP:</span> Hyper Text Transfer Protocol, protocolo para transmisión de información en plano, sin cifrado. Su puerto por defecto es el número 80.</p>
+            <p class="text"><span class="tag">HTTPS:</span> Hyper Text Transfer Protocol Secure, protocolo para transmisión de información cifrada mediante SSL o TLS. Su puerto por defecto es el número 443.</p>
+            <h3>SSL (Secure Sockets Layer)</h3>
+            <p class="text">Es un protocolo que proporciona privacidad e integridad entre dos aplicaciones. El sistema SSL es independiente del protocolo utilizado; esto significa que puede asegurar transacciones realizadas en la Web a través del protocolo HTTP y también conexiones a través de los protocolos FTP, POP e IMAP. SSL actúa como una capa adicional que permite garantizar la seguridad de los datos y que se ubica entre la capa de la aplicación y la capa de transporte.</p>
+            <p class="text">Los datos que circulan en un sentido y otro entre el cliente y el servidor se cifran mediante un algoritmo simétrico como DES o RC4. Un algoritmo de clave pública (generalmente RSA) se utiliza para el intercambio de las claves de cifrado y para las firmas digitales. El algoritmo utiliza la clave pública en el certificado digital del servidor. Con el certificado digital del servidor, el cliente también puede verificar la identidad del servidor.</p>
+            <p class="text">Fases:</p>
+            <ol>
+                <li>Establecimiento de la conexión y negociación de los algoritmos criptográficos que van a usarse en la comunicación a partir frl conjunto de algoritmos soportados por cada uno de los interlocutores.</li>
+                <li>Intercambio de claves usando algún mecanismo de clave pública y autentificación de los interlocutores a través de sus certificados digitales.</li>
+                <li>Cifrado simétrico de tráfico.</li>
+            </ol>
+            <h3>TLS (Transport Layer security)</h3>
+            <p class="text"> es una evolución del protocolo SSL, es un protocolo mediante el cual se establece una conexión segura por medio de un canal cifrado entre el cliente y servidor.</p>
+            <img src="./assets/algoasimetr8.png" alt="">
+            <p class="text">Caracteristicas adicionales:</p>
+            <img src="./assets/algoasimetr9.png" alt="">
+            <img src="./assets/algoasimetr10.png" alt="">
+            <h3>Firma electrónica:</h3>
+            <p class="text">Se entiende por firma electrónica al conjunto de datos electrónicos integrados, ligados o asociados de manera lógica a otros datos electrónicos, utilizado por el signatario como su medio de identificación, que carezca de alguno de los requisitos legales para ser considerada firma digital.</p>
+            <h3>Firma digital:</h3>
+            <p class="text">Resultado de aplicar a un documento digital un procedimiento matemático que requiere información de exclusivo conocimiento del firmante, encontrandose ésta bajo su absoluto control. La firma digital debe ser susceptible se verificación por terceras partes tal que dicha verificación permita identificar al firmante y detectar cualquier alteración posterior a su firma.</p>
+            <img src="./assets/algoasimetr11.png" alt="">
+            <h3>Modelos de infraestructura de seguridad:</h3>
+            <p class="text"><span class="tag">PKI - Infraestructura de Clave Pública:</span> Es una combinación de hardware, software, politicas y procedimientos de seguridad que define un entorno de confianza centralizado y provee garantias para operaciones criptográficas y como el cifrado, la firma digital o el no repudio de transacciones electronicas.</p>
+            <p class="text"><span class="tag">Certificados Digitales:</span> Documento digital firmado digitalmente por un certificador, que vincula los datos de verificación de firma a su titular. Es esencialmente una clave pública, un identificador e información accesoria; firmados digitalmente por una autoridad de certificación, y su utilidad es demostrar que una clave pública pertenece a un usuario concreto.</p>
+            <img src="./assets/algoasimetr12.png" alt="">
+            <p class="text"><span class="tag">Certificados Digitales de revocación:</span> Cuando una clave pública pierde su validez es necesario anularla. Es un mensaje que identifica a la clave pública que se desea anular, firmada por la clave privada correspondiente.</p>
+            <p class="text"><span class="tag">PKI - Infraestructura de clave pública</span> Componentes:</p>
+            <img src="./assets/algoasimetr13.png" alt="">
+            <img src="./assets/algoasimetr14.png" alt="">
+            <p class="text"><span class="tag">Online Certificate Status Protocol:</span></p>
+            <img src="./assets/algoasimetr15.png" alt="">
+            <p class="text"><span class="tag"> Anillo o Circulo de confianza:</span> Es un modelo de confianza distribuido que provee garantias para operaciones criptográficas como el cifrado, la firma o el no repudio de transacciones electrónicas basado en la cantidad de firmas de actores de confianza que posea una clave pública.</p>
+            <h3>Ley de Firma Digital 25.506</h3>
+            <p class="text">Tiene por objetivo lograr la implementación de esta herramienta tecnológica en los sistemas administrativos y de gestión de los distintos organismos de la Administración Pública.</p>
+            <h3>Certificadores licenciados:</h3>
+            <p class="text">AFIP; ANSES; ONTI; ENCODE S.A.</p>
         </section>
         <hr>
         <section class="class">
