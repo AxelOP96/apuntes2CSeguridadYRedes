@@ -866,14 +866,22 @@
                     <iframe src="./assets/U3-Criptografia-parte1.pdf" width="1000" height="600" style="border: none;"></iframe>
                 </div>
             </div>
+            <p class="text">m es el mensaje,k es el conjunto de claves, e es la funcion, c es el resultado</p>
+
+            <h3>Criptografia clasica</h3>
+            <p class="text">Contiene cifradores por transposición y por sustitución.</p>
             <img src="./assets/teoria-cripto.png" alt="">
+            <p class="text">El mensaje lo pongo en una matriz de 5 columnas con "_" por espacios, uso una clave y la uso como referencia para realizar la transposición de columnas. Siempre se trabaja con los mismos caracteres.</p>
             <img src="./assets/cifra-transpo.png" alt="">
             <p class="text">Los cifradores por sustitución utilizan la técnica de modificación de cada carácter del texto en claro por otro correspondiente al alfabeto de cifrado. Si el alfabeto de cifrado es el mismo del mensaje o el único se habla de cifradores monoalfabéticos, si interviene más de un alfabeto es polialfabético.</p>
+            <h3>Cifradores por sutitución polialfabética</h3>
+            <p class="text">Se define un alfabeto pero se distribuye en una matriz de dos dimensiones.</p>
             <img src="./assets/cifra-polialfa.png" alt="">
             <h3>Esquemas de modificación:</h3>
             <p class="text"><span class="tag">Binario:</span>  Representa la información a nivel de bits con 0 y 1.</p>
             <p class="text"><span class="tag">Hexadecimal:</span> Representa la información con 16 caracteres con representación gráfica(0123456789ABCDEF) asignando 4 bits a cada carácter.</p>
             <p class="text"><span class="tag">Base64:</span> Representa la información con 64 caracteres representables indicando con un caracter especial (=) los octetos faltantes del último bloque.</p>
+            <h3>Criptografía moderna:</h3>
             <p class="text"><span class="tag">Algoritmos Simétricos:</span> Es un tipo de cifrado que usa una misma clave para cifrar y para descifrar. Las dos partes que se comunican mediante el cifrado simétrico deben estar de acuerdo en la clave a usar de antemano. Una vez de acuerdo, el remitente cifra un mensaje usando la clave, lo envia al destinatario y este lo descifra usando la misma clave.</p>
             <p class="text">Dentro de las ventajas se encuentra <strong>la sencillez de implementación, la robustez, la velocidad de cifrado y la longitud del mensaje.</strong> Dentro de las desventajas está <strong>la clave debe ser compartida previamente con seguridad y la comunicación entre múltiples actores requiere numerosas claves.</strong></p>
             <p class="text">Algoritmos simétricos de bloque:</p>
@@ -888,6 +896,7 @@
             <img src="./assets/padding1.png" alt="">
             <img src="./assets/padding2.png" alt="">
             <p class="text"><span class="tag">CBC:</span> Cipher block chaining, en este método el mensaje se fracciona en partes y se realiza un XOR con el bloque previo antes de cifrar cada parte.</p>
+            <p class="text">Hago un XOR entre el texto plano y el vector de incialización, lo cifro y vuelvo a hacer el XOR, en total 3 veces.</p>
             <img src="./assets/cbc.png" alt="">
             <p class="text"><span class="tag">CFB:</span> Cipher Feedback, en este método el mensaje se fracciona en partes, se cifra un vector de inicialización y al resultado se le realiza un XOR con el bloque del mensaje. Los bloques posteriores utilizan como entrada el texto cifrado para reemplazar al vector de inicialización.</p>
             <img src="./assets/cfb.png" alt="">
@@ -908,6 +917,11 @@
             <img src="./assets/hashmdc1.png" alt="">
             <img src="./assets/hashmdc2.png" alt="">
             <img src="./assets/hashmdc3.png" alt="">
+        </section>
+        <hr>
+        <section class="class">
+            <h2 class="subtitle">Clase 8:</h2>
+
             <img src="./assets/hashmdc4.png" alt="">
             <img src="./assets/hashmdc5.png" alt="">
             <p class="text">Algoritmos asimétricos - Primos relativos:</p>
