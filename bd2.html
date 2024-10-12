@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Base de datos 2</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header class="header">
@@ -21,9 +22,57 @@
         <section class="class">
             <button class="print" onclick="printPage()">Imprimir</button>
             <h2 class="subtitle">Clase 1</h2>
+            <p class="text"><span class="tag">LIKE:</span>Busca un patron especifico en una cadena</p>
+            <img src="./assets/bd01.png" alt="">
+            <img src="./assets/bd02.png" alt="">
+            <h3>Funciones de agregado</h3>
+            <p class="text"><span class="tag">Count(campo)</span>Cuenta registros con contenido no nulo</p>
+            <p class="text"><span class="tag">Sum:</span> Suma contenido de campos numéricos</p>
+            <p class="text"><span class="tag">Max:</span> Obtiene el máximo valor de campos numéricos</p>
+            <p class="text"><span class="tag">Min:</span>Obtienen el mínimo valor de campos numéricos</p>
+            <p class="text"><span class="tag">Avg:</span>Obtiene el promedio de los valores de campos numéricos.</p>
+            <p class="text"><span class="tag">Group by:</span>La función devuelve cantidad de registros, si queremos averiguar la cantidad de un grupo.</p>
+            <p class="text"><span class="tag">Having:</span>Aplicar filtrado a funciones de agregado</p>
+            <h3>Tipos de relaciones</h3>
+            <p class="text"><span class="tag">Inner Join</span> </p>
+            <img src="./assets/bd03.png" alt="">
+            <p class="text"><span class="tag">Outer joins:</span> Left Outer Join y Right Outer Join.</p>
+            <img src="./assets/bd04.png" alt="">
+            <img src="./assets/bd05.png" alt="">
+
+            <p class="text"><span class="tag">Self Join:</span> Se llama a si misma.</p>
+            <img src="./assets/bd06.png" alt="">
+            <p class="text"><span class="tag">Cross Joins:</span> Es para una consulta de N por N</p>
+            <img src="./assets/bd07.png" alt="">
+            <p class="text"><span class="tag">Operador Union: Unión entre dos consultas, deben tener la misma cantidad de campos y ser del mismo tipo.</span></p>
+            <img src="./assets/bd08.png" alt="">
+            <p class="text"><span class="tag">Distinct</span> Para eliminar los repetidos en una consulta</p>
+            <p class="text"><span class="tag">Top:</span></p>
+            <p class="text"><span class="tag">Backup y Restore:</span></p>
+            <img src="./assets/bd09.png" alt="">
+            <h3>Insert, Update y Delete</h3>
+            <img src="./assets/bd10.png" alt="">
+            <p class="text">La instrucción INTO me permite crear una tabla a partir de una consulta.</p>
+            <p class="text"><span class="tag">Default:</span></p>
+            <img src="./assets/bd11.png" alt="">
+            <p class="text">La instrucción DELETE quita una o más filas en una tabla a menos que utilice una cláusula WHERE. <br>
+            Cada fila eliminada se alamcena en el registro de transacciones. <br>
+            La instrucción TRUNCATE TABLE elimina todas las filas de una tabla. <br>
+            SQL Server conserva la estructura de la tabla y los objetos asociados. <br>
+            Ambas se pueden deshacer con un ROLLBACK. TRUNCATE reinicará el contador para una tabla que contenga una columna IDENTITY. DELETE mantendrá el contador de la tabla para una columna IDENTITY. TRUNCATE es un comando DDL mientras que DELETE es un DML.</p>
+            <p class="text"><span class="tag">CASE:</span> Es una expresión especial de T-SQL que permite mostrar un valor alternativo dependiendo del valor de una columna o variable.</p>
+            <img src="./assets/bd12.png" alt="">
+            <p class="text">Cardinalidad:</p>
+            <img src="./assets/bd13.png" alt="">
+            <p class="text">Restricciones de las tablas:</p>
+            <img src="./assets/bd14.png" alt="">
+            <h3>Normalización: Formas Normales en las BD</h3>
 
         </section>
+        <hr>
+        <section class="class">
 
+        </section>
     </main>
 </body>
 </html>
