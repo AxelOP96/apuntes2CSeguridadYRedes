@@ -891,12 +891,13 @@
             <img src="./assets/xor.png" alt="">
             <h3>Modos de cifrado de bloques:</h3>
             <p class="text"><span class="tag">ECB:</span> Electronic codebook, en este método el mensaje se fracciona en partes y cada una es cifrada de manera independiente.</p>
+            <p class="text">El problema es que es lineal.</p>
             <img src="./assets/ecb.png" alt="">
             <p class="text"><span class="tag">Padding:</span> los algoritmos simétricos de bloque requieren que el mensaje sea fragmentado en partes de una longitud fija; esto podria causar que el ultimo bloque sea de una longitud menor a la requerida, para esto se recurre a los métodos de padding.</p>
             <img src="./assets/padding1.png" alt="">
             <img src="./assets/padding2.png" alt="">
             <p class="text"><span class="tag">CBC:</span> Cipher block chaining, en este método el mensaje se fracciona en partes y se realiza un XOR con el bloque previo antes de cifrar cada parte.</p>
-            <p class="text">Hago un XOR entre el texto plano y el vector de incialización, lo cifro y vuelvo a hacer el XOR, en total 3 veces.</p>
+            <p class="text">Hago un XOR entre el texto plano y el vector de inicialización(mismo tamaño del bloque de entrada, deberia estar compuesto por informacion aleatoria y no deberia ser reutilizada en otro mensaje), lo cifro y vuelvo a hacer el XOR, se van encadenando en total 3 veces.</p>
             <img src="./assets/cbc.png" alt="">
             <p class="text"><span class="tag">CFB:</span> Cipher Feedback, en este método el mensaje se fracciona en partes, se cifra un vector de inicialización y al resultado se le realiza un XOR con el bloque del mensaje. Los bloques posteriores utilizan como entrada el texto cifrado para reemplazar al vector de inicialización.</p>
             <img src="./assets/cfb.png" alt="">
@@ -921,8 +922,15 @@
         <hr>
         <section class="class">
             <h2 class="subtitle">Clase 8:</h2>
-
+            <div class="pdf-wrapper">
+                <h3 class="pdf-title">U3 Criptografía</h3>
+                <div class="pdf-container">
+                    <iframe src="./assets/16-U3-Criptografia.pdf" width="1000" height="600" style="border: none;"></iframe>
+                </div>
+            </div>
+            <p class="text">Funciones para proteger especificamente contraseñas, no se guarda la contraseña sino un valor derivado.</p>
             <img src="./assets/hashmdc4.png" alt="">
+            <p class="text">Sistema modular: ejemplo reloj de agujas.</p>
             <img src="./assets/hashmdc5.png" alt="">
             <p class="text">Algoritmos asimétricos - Primos relativos:</p>
             <p class="text">Sean a, b e Z, se dice que son <strong>Primos relativos(o coprimos) "a" y "b" si no tienen ningún factor primo en común,</strong> es decir si no tienen otro divisor común mas que 1 ó -1, o cumplen que el <strong>mcd (a,b) = 1.</strong> <br>
@@ -936,6 +944,7 @@
             <img src="./assets/algoasimetrcifra.png" alt="">
             <p class="text">Autentificación de mensaje(Firma): Algunos algoritmos asimétricos permiten que se pueda autenticar un mensaje para garantizar su integridad. En ese caso la clave que se usa para cifrar es la clave privada, al revés que para la simple codificación de mensajes.</p>
             <img src="./assets/rsa.png" alt="">
+            <p class="text">El problema es la factorización de números.</p>
             <img src="./assets/rsaejem.png" alt="">
             <img src="./assets/firmadig.png" alt="">
             <img src="./assets/algoasimetr1.png" alt="">
@@ -950,6 +959,9 @@
             <img src="./assets/algoasimetr7.png" alt="">
             <h3>Algoritmos públicos y privados:</h3>
             <p class="text">Los algoritmos públicos son aquellos cuya definición y funcionamiento se ponen a disposición pública, permitiendo que cualquier persona o entidad acceda al mismo para su evaluación o investigación. Al contrario los privados son aquellos cuyo funcionamiento interno es desconocido, son considerados menos confiables.</p>
+        </section>
+        <hr>
+            <section class="class">
             <h3>HTTP vs HTTPS:</h3>
             <p class="text"><span class="tag">HTTP:</span> Hyper Text Transfer Protocol, protocolo para transmisión de información en plano, sin cifrado. Su puerto por defecto es el número 80.</p>
             <p class="text"><span class="tag">HTTPS:</span> Hyper Text Transfer Protocol Secure, protocolo para transmisión de información cifrada mediante SSL o TLS. Su puerto por defecto es el número 443.</p>
