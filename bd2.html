@@ -134,8 +134,26 @@
             <p class="text"><span class="tag">SCHEMAS:</span>Es un espacio de nombres distinto que existe de forma independientemente del usuario de BD que lo creó.</p>
             <h3>Tipos de restricciones:</h3>
             <p class="text">PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, DEFAULT.</p>
-            <p class="text"></p>
-            <p class="text"></p>
+        </section>
+        <hr>
+        <section class="class">
+            <h2 class="subtitle">Clase 5:</h2>
+            <h3>Indices:</h3>
+            <p class="text">Facilitan la obtención de información de una tabla. Una tabla se indexa por un campo(o varios). <br> Posibilita el acceso directo y rápido haciendo más eficiente las búsquedas. Sin índice, SQL Server debe recorrer secuencialmente toda la tabla para encontrar un registro. <br> Acelera la recuperación de información. <br> Optimiza el acceso a los datos, mejora el rendimiento acelerando las consultas y otras operaciones.</p>
+            <img src="./assets/bd21.png" alt="">
+            <p class="text">La desventaja es que consume espacio en disco y egenra costo de mantenimiento. Los indices más adecuados son aquellos creados con campos que contienen valores únicos. Es importante identificar el o los campos por los que seria util crear un indice, aquellos campos por los cuales se realizan busquedas con frecuencia: PK, FK o campos que combinan tablas.</p>
+            <h3>Indices agrupados y no agrupados</h3>
+            <img src="./assets/bd22.png" alt="">
+            <img src="./assets/bd23.png" alt="">
+            <img src="./assets/bd24.png" alt="">
+            <p class="text">Si no es especifica un tipo de indice, será no agrupado de modo predeterminado. Los campos de tipo text, ntext e image no se pueden indizar. Es recomendable crear los indices agrupados antes que los no agrupados, porque los primeros modifican el orden físico de los registros ordenandolos secuencialmente. La diferencia básica entre indices agrupados y no agrupados es que los registros de un indice agrupado están ordenados y almacenados de forma secuencial en función de su clave. SQL Server crea automaticamente indices cuando se crea una restricción "Primary key" o "Unique" en una tabla. Es posible crear indices en las vistas.</p>
+            <img src="./assets/bd25.png" alt="">
+            <h3>Vistas</h3>
+            <p class="text">Una vista es una consulta que se presenta como una tabla(virtual) a partir de un conjunto de tablas en una BD relacional. De la vista solo se almacena la definicion no los datos.</p>
+            <p class="text">Es una alternativa para mostrar datos de varias tablas. Es como una tabla virtual que almacena una consulta. Los datos accesibles a través de la vista no están almacenados en la BD como un objeto.</p>
+            <p class="text">Una vista almacena una consulta como un objeto para utilizarse posteriormente. Las tablas consultadas en una vista se llaman tablas base. En general, se puede dar un nombre a cualquier consulta y almacenarla como una vista.</p>
+            <p class="text">Usos</p>
+            <img src="./assets/bd26.png" alt="">
             <p class="text"></p>
             <p class="text"></p>
             <p class="text"></p>
