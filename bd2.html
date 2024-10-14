@@ -172,12 +172,41 @@
             <p class="text"><span class="tag">Sp_Help</span> Presenta información acerca de un objeto de BD, un tipo de datos definido por el usuario o un tipo de datos. Puede ejecutarse sin parámetros, entonces muestra la información sobre todos los objetos o puede pasarse como parámetro el nombre del objeto a consultar.</p>
             <h3>Instantáneas de BD</h3>
             <p class="text">Es una vista estática de solo lectura de una BD denominada base de datos origen. <br> Se mantiene hasta que el propietario de la BD la quita explicitamente. <br> Deben residir en la misma instancia de servidor que la BD. <br> Se pueden utilizar para crear informes. Además, en el caso de que se produzca un error de usuario en una BD de origen, esta se puede revertir al estado en que se encontraba cuando se creó la instantánea.</p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-            <p class="text"></p>
-        </section>
 
+        </section>
+        <hr>
+        <section class="class">
+            <h2 class="subtitle">Clase 7</h2>
+            <h3>BATCH y SCRIPTS</h3>
+            <p class="text"><span class="tag">Batch</span> Conjunto de sentencias que terminan con la instrucción GO, tambien entre BEGIN TRAN y COMMIT</p>
+            <p class="text"><span class="tag">Script</span> Conjunto de batchs</p>
+            <p class="text">Las variables en SQL Server permiten almacenar un valor y recuperarlo más adelante para emplearlos en otras sentencias. <br> Son específicas de cada conexión y son liberadas automáticamente al abandonar la conexión. <br> Comienzan con "@" (arroba) seguido del nombre(sin espacios), dicho nombre puede contener cualquier caracter.</p>
+            <img src="./assets/bd29.png" alt="">
+            <img src="./assets/bd30.png" alt="">
+            <img src="./assets/bd31.png" alt="">
+            <h3>Stored procedures</h3>
+
+            <p class="text">Es un grupo de secuencias T-SQL compiladas dentro de un plan de ejecución. Son un método de encapsular tareas repetitivas que involucran variables definidas por el usuario para cálculos intermedios como también sentencias de control de flujo de ejecución para la implementación de bloques incondicionales o repetitivos. Son módulos o rutinas que encapsulan código para su reutilización. </p>
+            <p class="text">Caracteristicas: <br>
+            Aceptan parámetros de entrada. <br>
+            Devuelven un valor de retorno(escalar) que indica el éxito o falla de su ejecución. <br> Pueden llamar a otros SPs. <br> Pueden devolver valores en la forma de parámetros de salida.</p>
+            <p class="text">Ventajas:</p>
+            <img src="./assets/bd32.png" alt="">
+            <img src="./assets/bd33.png" alt="">
+            <img src="./assets/bd34.png" alt="">
+            <img src="./assets/bd35.png" alt="">
+
+            <h3>Manejo de errores</h3>
+            <p class="text">TRY - CATCH</p>
+            <p class="text"><span class="tag">ERROR_NUMBER</span> Devuelve el número interno del error</p>
+            <p class="text"><span class="tag">ERROR_STATE</span> Devuelve la información sobre la fuente.</p>
+            <p class="text"><span class="tag">ERROR_SEVERITY</span> Devuelve la información sobre cualquier cosa, desde errores informativos hasta errores que el usuario de DBA puede corregir, etc</p>
+            <p class="text"><span class="tag">ERROR_LINE</span> Devuelve el número de linea en el que ocurrió un error</p>
+            <p class="text"><span class="tag">ERROR_PROCEDURE</span> Devuelve el nombre del procedimiento alamacenado o la función</p>
+            <p class="text"><span class="tag">ERROR_MESSAGE</span>Devuelve la información más esencial y ese es el mensaje de texto del error</p>
+            <img src="./assets/bd35.png" alt="">
+        </section>
+        <hr>
     </main>
 </body>
 </html>
