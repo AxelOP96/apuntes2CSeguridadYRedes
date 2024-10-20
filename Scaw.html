@@ -962,6 +962,7 @@
         </section>
         <hr>
         <section class="class">
+            <h2 class="subtitle">Clase 9</h2>
             <h3>HTTP vs HTTPS:</h3>
             <p class="text"><span class="tag">HTTP:</span> Hyper Text Transfer Protocol, protocolo para transmisión de información en plano, sin cifrado. Su puerto por defecto es el número 80.</p>
             <p class="text"><span class="tag">HTTPS:</span> Hyper Text Transfer Protocol Secure, protocolo para transmisión de información cifrada mediante SSL o TLS. Su puerto por defecto es el número 443.</p>
@@ -1000,6 +1001,170 @@
             <p class="text">Tiene por objetivo lograr la implementación de esta herramienta tecnológica en los sistemas administrativos y de gestión de los distintos organismos de la Administración Pública.</p>
             <h3>Certificadores licenciados:</h3>
             <p class="text">AFIP; ANSES; ONTI; ENCODE S.A.</p>
+        </section>
+        <hr>
+        <section class="class">
+            <h2>Unidad 4: Aplicaciones de seguridad</h2>
+            <p class="text">LOGGING -> Su finalidad se vincula a:
+                • Identificar incidentes de seguridad.
+                • Monitorear violaciones de políticas.
+                • Asistir en controles de no-repudio
+                • Provee información sobre problemas o situaciones atípicas
+                • Contribuir con información específica para la investigación de incidentes que no
+                pueda obtenerse de otras fuentes.
+                • Contribuir con la defensa ante vulnerabilidades y exploits mediante la detección de ataques.
+                ¿Dónde registrar? -> Sistemas de archivos, almacenamiento en la nube, bases de datos SQL y NoSQL.
+                ¿Qué registrar? -> Fallos de validación, autenticación, autorización, anomalías, fallas de aplicación, eventos legales.
+                ¿Qué NO registrar? -> Código fuente, identificadores de sesión, credenciales y tokens de acceso, claves de cifrado, SPI...
+
+                ENMASCARAMIENTO DE DATOS -> Proceso por el cual se reemplazan los datos
+                sensibles de un sistema con el objetivo de proteger la información confidencial ante situaciones que se salgan de control. ”Seudonimización" es el tratamiento de datos personales de manera tal que ya no puedan atribuirse a un interesado.
+
+                DEBILIDADES ASOCIADAS AL LOGGING:
+                • CWE - 117 Improper Output Neutralization for Logs
+                • CWE - 223 Omission of Security-relevant Information.
+                • CWE - 532 Insertion of Sensitive into Log File.
+                • CWE - 778 Insufficient Logging.
+
+                VALIDACIÓN DE ENTRADA -> Debe cubrir los aspectos semánticos como sintácticos de la información ingresada. (Se sugiere implementar validación “White List” para validar el ingreso de datos, describiendo el tipo de dato como listas de valores o expresiones regulares).
+
+                EXPRESIONES REGULARES DE VALIDACIÓN DE ENTRADA POR TIPOS:
+                URL -> (esto va al final de la expresión como en todas) -> [[:blank:]])?$.
+                IP -> [0-9]?)$.
+                EMAIL -> [a-zA-Z]{2,7}$.
+                NÚMEROS -> ocho|nueve)$.
+
+                AUTENTICACIÓN EN LA WEB
+                Su objetivo es proveer servicios de autenticación segura a las aplicaciones web mediante:
+                • Vinculando una unidad del sistema a un usuario mediante el uso de una credencial.
+                • Proveyendo controles de autenticación razonables de acuerdo al riesgo de la app.
+                • Denegando el servicio a atacantes que usan varios métodos para atacar el sistema de autenticación.
+                CONSIDERACIONES GENERALES.
+                • La autenticación es sólo tan fuerte como sus procesos de administración de
+                usuarios.
+                • Use la forma más adecuada de autenticación apropiada para su clasificación de
+                bienes.
+                • Re-autenticar al usuario para transacciones de alto valor y acceso a áreas
+                protegidas.
+                • Autenticar la transacción, no al usuario.
+                • Contraseñas trivialmente rotas, no son adecuadas en sistemas de alto valor.
+
+                BUENAS PRÁCTICAS.
+                • User IDs -> Verificar que no sean CASE SENSITIVE.
+                • Fortaleza de contraseñas -> Long min de 10 caracteres y max de 20.
+                • Implementar métodos seguros de recuperación.
+                • Almacenar contraseñas de forma segura > soporte criptográfico.
+                • Transmitir contraseñas solo sobre TLS.
+                • Solicitar re-autenticación -> Antes de operaciones sensibles.
+                • Utilizar sistemas de autenticación de factores múltiples.
+                • Manejo de mensajes de error -> mensajes genéricos.
+                • Prevenir ataques por fuerza bruta -> Captchas o controles de comportamiento.
+
+                MÉTODOS DE PROTECCIÓN ANTE ATAQUES DE AUTOMATIZACIÓN.
+                • MFA o Autenticación de Factor Múltiple.
+                • Bloqueo de cuenta
+                • CAPTCHA
+                • Preguntas de seguridad o palabras memorables.
+
+                CONTRASEÑAS DE UN SOLO USO.
+                • OTP: One Time Password, corresponde a un valor confidencial que no puede ser
+                reutilizado.
+                • HOTP: Algoritmo de generación de contraseñas de un solo uso basadas en HMAC. RFC-4226.hola axel 🙂
+                • TOTP: Timed-based One Time Password, valor confidencial que no puede ser
+                reutilizado y cuenta con tiempo de vida acotado. RFC-6238.
+
+                TÉCNICAS DE AUTENTICACIÓN DE USUARIOS.
+                • A.Básica y segura (HTTP-Basic, HTTP-Digest)
+                • A.Basada en formularios (Usuario-contraseña)
+                • A.Integrada (ISS, ASP.NET, Active Directory)
+                • A.Basada en certificado (x509)
+                • A.Fuerte o de factor múltiple.(algo que eres, que sabes que tienes, ubicación)
+
+                JWT – JSON WEB TOKEN -> Es un estándar abierto (RFC-7519) utilizado para transmitir de forma segura información en formato JSON, está compuesto por: El encabezado que especifica tipo de token y algoritmo de firma, la carga útil que contiene los datos relevantes y la firma que verifica la integridad del token. Se utilizan para la autenticación y autorización.
+
+                OBJETIVOS - AUTORIZACIÓN EN LA WEB:
+                • Asegurar que los usuarios realicen acciones permitidas de acuerdo a sus privilegios.
+                • Controlar el acceso a recursos protegidos mediante decisiones basadas en rol o
+                privilegios de usuarios.
+                • Prevenir ataques de escalada de privilegios.
+
+                MÉTODOS DE CONTROL DE ACCESO
+
+                ROLE BASED ACCESS CONTROL (RBAC) -> Las decisiones de acceso se basan en las funciones y responsabilidades de un individuo dentro de la organización o base de usuarios.
+                Generalmente la definición de funciones está basada en objetivos y estructura de la organización. Ej: una organización médica, roles de médico, enfermo, asistente, etc.
+                DISCRETIONARY ACCESS CONTROL (DAC) -> Medio para restringir el acceso a la
+                información sobre la base de la identidad de los usuarios y/o la pertenencia a ciertos grupos. Las decisiones están basadas en las autorizaciones concebidas por el usuario con sus credenciales al momento de la autenticación. Ej El sistema de archivos de un sistema Unix (rwx)
+                MANDATORY ACCESS CONTROL (MAC) -> Garantiza que la ejecución de la política de seguridad de la organización no se basa en el cumplimiento del usuario en la aplicación web. MAC asegura la información mediante la asignación de etiquetas de sensibilidad en la información y lo compara con el nivel de sensibilidad de los usuarios. Ej. Aplicaciones militares (extremadamente seguro).
+                ATTRIBUTE BASED ACCESS CONTROL (ABAC) -> Sistema de control basado en
+                atributos asignados a cualquier componente del sistema (recurso, usuarios, etc). Se utiliza un lenguaje de soporte como XACML para definir las reglas de acceso.
+                BUENAS PRÁCTICAS DE IMPLEMENTACIÓN:
+                • Codificar el control en la actividad objetivo.
+                • Disponer de un Controlador Centralizado (ACL)
+                • Utilizar un Control Central de Acceso, en las diferentes capas.
+                • Verificar la política del lado del servidor (Server-Side)
+
+                ATAQUES DE CONTROL DE ACCESO.
+                • VERTICAL ACCESS CONTROL ATTACKS: Un usuario convencional obtiene
+                accesos superiores o de administrador.
+                • HORIZONTAL ACCESS CONTROL ATTACKS: Con el mismo rol o nivel, el usuario
+                puede acceder a información de otros usuarios.
+                • BUSINESS LOGIC ACCESS CONTROL ATTACKS: Abusar de una o más
+                actividades para realizar una operación con un resultado no autorizado para ese
+                usuario
+
+                ADMINISTRACIÓN DE USUARIOS Y PRIVILEGIOS.
+                Objetivos:
+                • Las funciones de nivel administrativo están segregadas apropiadamente de la
+                actividad del usuario
+                • Los usuarios no pueden acceder o utilizar funcionalidades administrativas
+                • Proveer la necesaria auditoría y trazabilidad de funcionalidad administrativa.
+
+                DevSecOps -> Conjunto de prácticas que combinan el desarrollo de software (Dev), la seguridad (Sec) y las operaciones de la tecnología de la información (Ops) para asegurar y acortar el ciclo de vida del desarrollo de software.
+
+                WEB SERVICES -> Aplicaciones web especializadas que difieren en la capa de
+                presentación, basados en XML/SOAP.
+
+                COMITÉS DE ESTÁNDARES.
+                • W3C, Estándares de esquema XML (XML Schema), SOAP (Simple Object
+                Access Protocol), XML-dsig, XML-enc, WSDL.
+                • OASIS, estándares de WS-Security.
+                • OASIS, UDDI (Universal Description Discovery and Integration).
+                • OASIS, SAML (Security Assertion MarkUp Language).
+                • Grupo de interoperabilidad de servicios Web.
+                Los servicios web típicamente representan una interfaz pública funcional, que se llama de forma pragmática.
+                WS-Security-WSS -> El estándar WSS lidia con varias medulares de seguridad, las
+                principales son.
+                • Encabezados WSSE a los sobres SOAP.
+                • Adjuntar testigos de seguridad y credenciales al mensaje.
+                • Insertando un estampado de tiempo.
+                • Firmar el mensaje
+                • Cifrado del mensaje
+                • Extensibilidad
+
+                • WS-POLICY
+                • WS-TRUST
+                • WS-PRIVACY
+                • WS-SECURECONVERSATION
+                • WS-FEDERATION
+                • WS-AUTHORIZATION
+
+                REST (Representational State Transfer)-> Técnica de arquitectura para sistemas
+                distribuidos. Su origen data del año 2000 por Roy Fielding.
+                Su objetivo fue evitar el uso de métodos complejos como CORBA, RPC y SOAP para la interconexión de sistemas, por ello usan llamados HTTP para operaciones CRUD.
+                REQUEST -> http://server.net/hola/Mundo
+                PLAIN RESPONSE -> Hola Mundo!
+                XML RESPONSE -> <datos> Hola Mundo! </datos>
+
+                </p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
+            <p class="text"></p>
         </section>
         <hr>
         <section class="class">
@@ -1149,7 +1314,7 @@
             <p class="text">¿Cuál de los siguientes puntos NO es un objetivo de la administración de usuarios y privilegios? </p>
             <ol class="questions">
                 <li>Los usuarios no pueden acceder o utilizar funcionalidades administrativas</li>
-                <li>Las funcionnes de nivel de administrador están segregadas apropiadamente de la actividad del usuario</li>
+                <li>Las funciones de nivel de administrador están segregadas apropiadamente de la actividad del usuario</li>
                 <li class="correct">Los usuarios transmiten información de manera cifrada y confidencial</li>
                 <li>Proveer la necesaria auditoria y trazabilidad de funcionalidad administrativa</li>
             </ol>
@@ -1413,7 +1578,7 @@
             </p>
             <ol class="questions">
                 <li>Va ligada indisolublemente al mensaje</li>
-                <li>Se genera en base a la clave pública del destinatario</li>
+                <li class="correct">Se genera en base a la clave pública del destinatario</li>
                 <li>Solo puede ser generada por su legítimo titular</li>
                 <li>Es públicamente verificable</li>
             </ol>
