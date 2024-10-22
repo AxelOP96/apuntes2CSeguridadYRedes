@@ -60,6 +60,78 @@
             <h2 class="subtitle">Modelos de parcial</h2>
 
         </section>
+        <hr>
+        <section class="class">
+            <h2 class="subtitle">Modelos Segundo parcial</h2>
+            <p class="text">
+                Un artículo en redes sociales afirma que usar un ORM podría perjudicar la performance de una aplicación por lo tanto NO recomienda su uso. Ud. está de acuerdo? Tiene algo de veracidad la afirmación? Justifique en todos los casos.
+            </p>
+            <p class="text">Asumiendo que existe una variable Contexto EF llamada “context” y que existe una entidad Cliente correctamente creada con EF, se quiere Modificar la razón social de un cliente existente (cuyo id es recibido por parámetro), utilizando el siguiente código, sin lograr el resultado esperado: <br>
+
+
+                public ActionResult ModificarRazonSocialCliente(int id)
+                {<br>
+                 //Punto b) 🡪 De manera “ Modificacion Parcial ”<br>
+                    Cliente var cliente = new Cliente();<br>
+
+                    cliente.Id = id;<br>
+
+                    cliente.RazonSocial = "Cliente Modificado";<br>
+
+                    context.Cliente.Atach(cliente); //Para que le preste atención<br>
+                    context.Entity(cliente).Property(x=> x.RazonSocial).isModified=true;<br>
+
+                    context.SaveChanges();<br>
+
+                    return RedirectToAction(nameof(Index));<br>
+                } <br>
+        a)Describa que está sucediendo, es decir identifique y describa el/los problema/s <br>
+
+        b)Corrija el código anterior para que finalmente cumpla el objetivo de modificación.
+        </p>
+        <p class="text">A partir del siguiente código:
+
+
+            public string LINQ() <br>
+                    {<br>
+                     //El origen del dato<br>
+                        int[] fibo = new int[] { 1, 2, 3, 5, 8, 13, 21, 34, 55 }; <br>
+                     //La creacion de la consulta
+                        var fiboOJO = fibo.Where(n => n >=8);<br>
+                        fibo[0] = 100; //Linea 3<br>
+                        string salida = "";<br>
+                     //Ejecucion
+                        foreach (int num in fiboOJO)<br>
+                        {<br>
+                            salida += $"{num} - ";<br>
+                        }<br>
+                        return salida; <br>
+                    }
+            Identifique las partes o pasos de una consulta en LINQ.
+            LINQ tiene 3 pasos, buscar el origen del dato, consultar el dato (Creación de la consulta) y ejecutarlo
+            Indique cual es la salida del método y justifique en relación a la Línea 3.
+            </p>
+        <p class="text">Verdadero o falso EF. Justifique en los casos que sea falso: <br>
+
+            Luego de recuperar un objeto del contexto de EF, el mismo tiene estado “recovered”, ya que está vinculado al contexto.<br>
+            Una de las limitaciones de EF Core 5 es que NO existe forma de agregar validaciones DataAnnotations a las entidades.<br>
+            En EF Core 5 es mandatorio/obligatorio usar el enfoque DataBaseFirst, debido a que ningún otro enfoque tiene soporte por Microsoft.<br>
+            LazyLoading es el patrón o mecanismo que permite postergar la inicialización de objetos relacionados hasta el momento que son utilizados y se encuentra activo por defecto en Net 5 / EF Core 5.</p>
+        <p class="text">Verdadero o falso Web Services y Sesión. Justifique en los casos que sea falso: <br>
+            ASPNET Web API se basa en convenciones respecto al nombre de sus métodos y NO permite bindear parámetros complejos (clases)<br>
+        Las variables de sesión en ASP.NET Core requieren habilitarse explícitamente ya que no están activas por defecto como en ASP.NET 4.x <br>
+        Un cliente que invoca a un servicio ASPNET MVC Web api debe usar serialización XML. <br>
+        ASPNET MVC Web Api NO mantiene el estado entre llamadas cliente y el servidor.
+        </p>
+
+
+
+
+
+
+
+
+        </section>
     </main>
     <script>
         function printPage() {
